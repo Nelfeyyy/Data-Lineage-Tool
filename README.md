@@ -37,18 +37,6 @@ For each SQL statement, it verifies:
 - whether the target column exists
 - whether the SQL data type adn the DDL data type look different
 
-### Environment validation :
-```bash
-python main.py pipeline check env
-```
-Checks whether your shell scripts use environment variables that are not resolved.
-
-It scans the shell scripts for references like : 
-- "$ORA_SCHEMA" or "${ORA_SCHEMA}"
-
-And it prints the unresolved variables it finds, with :
-- script file name
-- variable name
 
 
 ## ML
@@ -153,17 +141,7 @@ python main.py openlineage --dry-run
 Generate the OpenLineage Events, but does <b>NOT</b> send them to the BackEnd (``MARQUEZ``)
 
 ## Dev Utilities
-### FastText similarity : 
-```bash
-python main.py dev ft-similarity [TERME_1] [TERMER_2]
-```
-Example : 
-```bash
-python main.py dev ft-similarity msisdn phone_number
-```
-Compares two terms using the ``FastText`` embedding backend and prints a ``similarity score``
 
-It checks how close the two terms are in the embedding space learned from your telecom corpus.
 
 ### Clean-up (Caches) : 
 ```bash
