@@ -158,3 +158,14 @@ python main.py dev clear-json --confirm
 Deletes generated JSON outputs from the pipeline so you can rerun everything from scratch
 
 It asks for confirmation before deleting anything
+
+# How to use : 
+The system needs inputs. Among them :
+
+- <b>SQL Scripts (PostgresSQL):</b> add the sql scripts into the ``ressources/sql_scripts`` repository
+
+- <b>Schéma (DDL) :</b> add the schéma of the database into the ``ressources/schema`` repository
+
+- <b>Shell Scripts : </b>add the shell scripts into the ``ressources/shell_scripts`` repository
+
+- <b>Environements Variables :</b> if your shell scripts uses env variables then you can add them into ``ressources/conf`` repository
